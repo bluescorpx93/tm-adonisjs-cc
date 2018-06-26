@@ -1,0 +1,9 @@
+@layout('layouts/main')
+
+@section('content')
+<h1> Wow {{ title }} !</h1>
+<p> <strong> Posts from DB </strong> </p>
+@each(post in posts)
+  <a href="/posts/{{post.id}}"> {{ post.title }}</a>
+@endeach
+@endsection
